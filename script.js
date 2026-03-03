@@ -1,26 +1,32 @@
-const texts = [
+const text = [
     "Mahasiswa Ilmu Komputer",
     "Web Developer Beginner",
-    "UI Design Enthusiast",
-    "Future Tech Innovator"
+    "UI Design Enthusiast"
 ];
 
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
 
-(function type(){
-    if(count === texts.length){
-        count = 0;
+function typeEffect(){
+    current = text[i];
+    
+    if(!isDeleting){
+        document.getElementById("typing").textContent = current.slice(0, ++j);
+        if(j === current.length){
+            isDeleting = true;
+            setTimeout(typeEffect, 1000);
+            return;
+        }
+    } else {
+        document.getElementById("typing").textContent = current.slice(0, --j);
+        if(j === 0){
+            isDeleting = false;
+            i = (i + 1) % text.length;
+        }
     }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+    setTimeout(typeEffect, 100);
+}
 
-    document.getElementById("typing").textContent = letter;
-    if(letter.length === currentText.length){
-        count++;
-        index = 0;
-    }
-    setTimeout(type, 120);
-})();
+typeEffect();
