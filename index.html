@@ -5,70 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Voni Saputri</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <h2 class="logo">Voni<span>Saputri</span></h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <h2 class="logo">Voni<span>Saputri</span></h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Halo, Saya <span>Voni Saputri</span></h1>
-            <h3 id="typing"></h3>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Halo, Saya <span>Voni Saputri</span></h1>
+        <h3 id="typing"></h3>
+        <p>
+            Mahasiswa Ilmu Komputer Universitas Halu Oleo yang memiliki minat besar 
+            dalam pengembangan teknologi dan dunia digital modern.
+        </p>
+        <a href="#projects" class="btn">Lihat Proyek</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>Tentang Saya</h2>
+    <p>
+        Saya adalah mahasiswa Ilmu Komputer Universitas Halu Oleo. 
+        Saya memilih bidang ini karena ingin mempelajari dunia digital lebih lanjut 
+        serta memahami bagaimana teknologi dapat menjadi solusi inovatif di masa depan.
+    </p>
+    <p>
+        Saya percaya bahwa teknologi bukan hanya tentang coding, tetapi juga tentang 
+        kreativitas, desain, dan bagaimana menciptakan pengalaman digital yang menarik 
+        dan bermanfaat bagi banyak orang.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+    <h2>Skill Saya</h2>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>C++</p>
+        <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>MySQL</p>
+        <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <h2>Proyek Saya</h2>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>Website Menu Kantin Kampus</h3>
             <p>
-                Mahasiswa Ilmu Komputer Universitas Halu Oleo yang memiliki minat besar
-                dalam dunia teknologi dan pengembangan digital.
+                Saya membuat website menu kantin kampus yang menampilkan daftar makanan,
+                harga, serta fitur pemesanan sederhana. Website ini dirancang untuk 
+                memudahkan mahasiswa melihat menu dan mengetahui informasi harga 
+                secara cepat dan praktis.
             </p>
-            <a href="#contact" class="btn">Hubungi Saya</a>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya adalah mahasiswa Program Studi Ilmu Komputer di Universitas Halu Oleo.
-            Alasan saya memilih bidang ini karena saya ingin mempelajari dunia digital
-            lebih lanjut dan memahami bagaimana teknologi dapat memberikan dampak
-            positif dalam kehidupan sehari-hari.
-        </p>
-        <p>
-            Saya memiliki ketertarikan pada pengembangan website, sistem informasi,
-            serta teknologi berbasis data. Bagi saya, dunia digital bukan hanya tentang
-            coding, tetapi juga tentang kreativitas, inovasi, dan solusi untuk masa depan.
-        </p>
-        <p>
-            Saya terus belajar dan mengembangkan kemampuan saya agar dapat menjadi
-            individu yang kompeten, adaptif, dan siap menghadapi perkembangan teknologi
-            yang semakin pesat.
-        </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Kontak Saya</h2>
-        <div class="contact-box">
-            <p><strong>Email:</strong> vonysaputri616@gmail.com</p>
-            <p><strong>No. Telepon:</strong> 082326869223</p>
-            <p><strong>Instagram:</strong> @sputriiv.__</p>
+        <div class="project-card">
+            <h3>Desain UI & Kreatif</h3>
+            <p>
+                Saya juga membuat berbagai desain antarmuka dan konsep visual modern 
+                untuk website maupun aplikasi. Fokus saya adalah menciptakan tampilan 
+                yang minimalis, elegan, dan nyaman digunakan oleh pengguna.
+            </p>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Voni Saputri | Portfolio Website</p>
-    </footer>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Kontak Saya</h2>
+    <p>Email: vonysaputri616@gmail.com</p>
+    <p>No. Telepon: 082326869223</p>
+    <p>Instagram: @sputriiv.__</p>
+</section>
+
+<footer>
+    <p>© 2026 Voni Saputri | Portfolio Website</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
