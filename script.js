@@ -1,38 +1,26 @@
-const textArray = [
+const texts = [
     "Mahasiswa Ilmu Komputer",
-    "Universitas Halu Oleo",
-    "Calon Web Developer",
-    "Pecinta Dunia Digital"
+    "Web Developer Beginner",
+    "UI Design Enthusiast",
+    "Future Tech Innovator"
 ];
 
-let typingElement = document.getElementById("typing");
-let textIndex = 0;
-let charIndex = 0;
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
 
-function typeEffect() {
-    if (charIndex < textArray[textIndex].length) {
-        typingElement.innerHTML += textArray[textIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(typeEffect, 100);
-    } else {
-        setTimeout(eraseEffect, 1500);
+(function type(){
+    if(count === texts.length){
+        count = 0;
     }
-}
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
 
-function eraseEffect() {
-    if (charIndex > 0) {
-        typingElement.innerHTML = textArray[textIndex].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(eraseEffect, 50);
-    } else {
-        textIndex++;
-        if (textIndex >= textArray.length) {
-            textIndex = 0;
-        }
-        setTimeout(typeEffect, 200);
+    document.getElementById("typing").textContent = letter;
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
     }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    typeEffect();
-});
+    setTimeout(type, 120);
+})();
